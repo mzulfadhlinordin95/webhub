@@ -27,4 +27,4 @@ def server_static(filepath):
 	return static_file(filepath, root='./static/')
 
 if __name__ == '__main__':
-	application.run(reloader=True, host="0.0.0.0", port=int(os.environ.get("PORT", 9000))) 
+	application.run(reloader=True, host="0.0.0.0", port=int(os.environ.get("PORT", 9596))) 
