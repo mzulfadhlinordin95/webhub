@@ -12,17 +12,23 @@ def main():
 def bs():
 	return template("bs.html")
 
+@route("/ss")
+def ss():
+	return template("ss.html")
+
 @route('/favicon.ico')
 def get_favicon():
-	return server_static('favicon.ico')
+	return server_static('cacing.png')
 
 @route('/robots.txt')
 def serve_robots():
 	return static_file('robots.txt',root='./static/')
 
 # specifying the path for the files
+@route('/favicon.ico<filepath:path>')
 @route('/<filepath:path>')
 @route('/bs/<filepath:path>')
+@route('/ss/<filepath:path>')
 def server_static(filepath):
 	return static_file(filepath, root='./static/')
 
