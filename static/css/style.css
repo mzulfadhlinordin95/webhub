@@ -8,14 +8,16 @@ h1{
 }
 h2{
 	font-size: 30px;
+	color: ##ffffff;
 }
 h3{
 	font-family: sans-serif;
-	font-size: 16px;
-	color: #118;
+	font-size: 15px;
+	color: #ffffff;
 }
 h4{
-	font-size: 18px;
+	font-size: 15px;
+	color: ##000000;
 }
 a{
 	font-family: sans-serif;

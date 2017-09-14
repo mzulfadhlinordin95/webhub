@@ -16,9 +16,13 @@ def bs():
 def ss():
 	return template("ss.html")
 
+@route("/v")
+def v():
+	return template("v.html")
+
 @route('/favicon.ico')
 def get_favicon():
-	return server_static('cacing.png')
+	return server_static('static/cacing_R4d_icon.ico')
 
 @route('/robots.txt')
 def serve_robots():
@@ -29,6 +33,7 @@ def serve_robots():
 @route('/<filepath:path>')
 @route('/bs/<filepath:path>')
 @route('/ss/<filepath:path>')
+@route('/v<filepath:path>')
 def server_static(filepath):
 	return static_file(filepath, root='./static/')
 
